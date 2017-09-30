@@ -84,6 +84,8 @@ Options
 .. cmdoption:: -reset-database
 
     Reset the database, forcing a full rescan and resync.
+    **Caution**: Ensure that all mountpoints are already mounted to avoid data syncing to the disk containing the mountpoint. This will create `.stfolder` folders in each sync location (if they do not exist). Ensure that sync folders which are mountpoints are indeed mounted to prevent syncing of inconsistent versions.
+
 
 .. cmdoption:: -reset-deltas
 
